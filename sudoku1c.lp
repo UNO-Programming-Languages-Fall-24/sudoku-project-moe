@@ -19,5 +19,5 @@ subgrid(X, Y, G) :- X = 1..4, Y = 1..4, G = 1+(((X-1)/g)*g +(Y-1)/g).
 
 :- sudoku(X, Y, N), sudoku(X2, Y2, N), subgrid(X, Y, G), G == G2, (X, Y) != (X2, Y2).
 
-#show subgrid/3.
+
 #show sudoku/3.
