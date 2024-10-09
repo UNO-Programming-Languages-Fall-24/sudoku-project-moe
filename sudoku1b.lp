@@ -6,20 +6,3 @@
 
 % Your implementation please...
 
-num(1..4).
-row(1..4).
-col(1..4).
-
-1 { sudoku(X,Y,N) : num(N) } 1 :- row(X), col(Y).
-
-sudoku(X,Y,N) :- initial(X,Y,N).
-
-:- sudoku(X,Y,N), sudoku(X,Y2,N), Y != Y2. 
-:- sudoku(X,Y,N), sudoku(X2,Y,N), X != X2.  
-
-n(2).
-
-subgrid(X,Y,G) :- row(X), col(Y), n(N), G = 1 + ((X-1)/N)*N + (Y-1)/N.
-
-#show sudoku/3.
-#show subgrid/3.
