@@ -7,11 +7,16 @@
 % Your implementation please...
 
 
+
+
 row(1..4).
 col(1..4).
 num(1..4).
 
-{ cell(X,Y) : row(X), col(Y) }.
+n(2).
+
+cell(X, Y) :- row(X), col(Y).
+
 1 { value(X, Y, N) : num(N) } 1 :- cell(X, Y).
 
 #show sudoku/3.
