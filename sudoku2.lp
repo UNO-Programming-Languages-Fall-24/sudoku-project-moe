@@ -6,7 +6,7 @@
 
 % Your implementation please...
 
-1 { sudoku(X, Y, N) : N = 1..4 } 1 :- X = 1..4, Y = 1..4.
+1 { sudoku(X, Y, N) : N = 1..9 } 1 :- X = 1..9, Y = 1..9.
 
 sudoku(X, Y, N) :- initial(X, Y, N).
 
@@ -15,7 +15,7 @@ sudoku(X, Y, N) :- initial(X, Y, N).
 
 %1b
 #const g = 2.
-subgrid(X, Y, G) :- X = 1..4, Y = 1..4, G = 1+(((X-1)/g)*g +(Y-1)/g).
+subgrid(X, Y, G) :- X = 1..9, Y = 1..9, G = 1+(((X-1)/g)*g +(Y-1)/g).
 
 :- sudoku(X, Y, N), sudoku(X2, Y2, N), subgrid(X, Y, G), subgrid(X2, Y2, G), X != X2, Y != Y2.
 
