@@ -10,8 +10,9 @@
 
 sudoku(X, Y, N) :- initial(X, Y, N).
 
-:- sudoku(X, Y, N), sudoku(X, Y2, N), Y != Y2.
 :- sudoku(X, Y, N), sudoku(X2, Y, N), X != X2.
+:- sudoku(X, Y, N), sudoku(X, Y2, N), Y != Y2.
+
 
 %1b
 #const g=2.
