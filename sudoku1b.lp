@@ -24,3 +24,4 @@ sudoku(X, Y, N) :- initial(X, Y, N).
 subgrid(X, Y, G) :- cell(X, Y), G = 1 + (((X-1) / g) * g + (Y-1) / g).
 
 #show sudoku/3.
+#show subgrid/3.
