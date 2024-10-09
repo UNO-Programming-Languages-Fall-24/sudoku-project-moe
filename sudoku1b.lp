@@ -13,8 +13,8 @@ sudoku(X, Y, N) :- initial(X, Y, N).
 :- sudoku(X, Y, N), sudoku(X, Y2, N), Y != Y2.
 :- sudoku(X, Y, N), sudoku(X2, Y, N), X != X2.
 
-n(2).
-subgrid(X, Y, G) :- X = 1..4, Y = 1..4, n(N), G = 1 + ((X-1)/N)*N + (Y-1)/N
+
+subgrid(X, Y, G) :- X = 1..4, Y = 1..4, N..4, G = 1 + ((X-1)/N)*N + (Y-1)/N
 
 #show subgrid/3.
 #show sudoku/3.
