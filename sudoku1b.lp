@@ -24,3 +24,5 @@ subgrid(X, Y, G) :- row(X), col(Y), n(N), G = 1+(((X-1)/N)*N+(Y-1)/N).
 
 
 #show sudoku/3.
+
+#show subgrid/3.
