@@ -10,14 +10,13 @@
 
 sudoku(X, Y, N) :- initial(X, Y, N).
 
-:- sudoku(X, Y, N), sudoku(X, Y2, N), Y != Y2.
-:- sudoku(X, Y, N), sudoku(X2, Y, N), X != X2.
+:- sudoku(X1, Y, N), sudoku(X2, Y, N), X1 != X2.  
+:- sudoku(X, Y1, N), sudoku(X, Y2, N), Y1 != Y2.  
 
 %1b
-#const g=2.
+#const g = 2.
 subgrid(X, Y, G) :- X = 1..4, Y = 1..4, G = 1+(((X-1)/g)*g +(Y-1)/g).
 
-:- sudoku(X, Y, N), sudoku(X2, Y2, N), subgrid(X, Y, G), subgrid(X1, Y2, G), X != X2, Y != Y2.
-
+:- sudoku(X, Y, N), sudoku(X2, Y2, N), subgrid(X, Y, G), subgrid(X2, Y2, G), X != X2, Y != Y2.
 
 #show sudoku/3.
