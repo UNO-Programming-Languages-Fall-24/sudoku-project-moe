@@ -18,11 +18,9 @@ cell(X, Y) :- row(X), col(Y).
 :- sudoku(X1, Y, N), sudoku(X2, Y, N), X1 != X2.
 :- sudoku(X, Y1, N), sudoku(X, Y2, N), Y1 != Y2.
 
-n(2).
-subgrid(X, Y, G) :- row(X), col(Y), n(N), G = 1+(((X-1)/N)*N+(Y-1)/N).
-
+#const n = 2.
+subgrid(X, Y, G) ::- X=1..n*n, Y=1..n*n, G = 1+(((X-1)/n)*n+(Y-1)/n).
 
 
 #show sudoku/3.
-
 #show subgrid/3.
