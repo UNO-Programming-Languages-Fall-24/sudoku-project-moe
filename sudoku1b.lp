@@ -19,7 +19,7 @@ sudoku(X,Y,N):- initial(X,Y,N).
 :- sudoku(X, Y1, N), sudoku(X, Y2, N), Y1 != Y2.
 
 n(2).
-subgrid(X, Y, G) :- n(N), G = 1+(((X-1)/N)*N+(Y-1)/N).
+subgrid(X, Y, G) :- - row(X), col(Y), n(N), G = 1+(((X-1)/N)*N+(Y-1)/N).
 
 :- sudoku(X1, Y1, N), sudoku(X2, Y2, N), subgrid(X1, Y1, G), subgrid(X2, Y2, G), X1 != X2, Y1 != Y2.
 
