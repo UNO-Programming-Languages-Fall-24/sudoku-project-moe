@@ -17,7 +17,7 @@ sudoku(X, Y, N) :- initial(X, Y, N).
 #const g=2.
 subgrid(X, Y, G) :- X = 1..4, Y = 1..4, G = 1+(((X-1)/g)*g +(Y-1)/g).
 
-:- sudoku(X, Y, N), sudoku(X2, Y2, N), subgrid(X, Y, G), subgrid(X1, Y2, G), (X, Y) != (X2, Y2).
+:- sudoku(X, Y, N), sudoku(X2, Y2, N), subgrid(X, Y, G), subgrid(X1, Y2, G), X != X2, Y != Y2.
 
 
 #show sudoku/3.
