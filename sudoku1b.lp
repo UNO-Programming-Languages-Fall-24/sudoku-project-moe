@@ -16,8 +16,7 @@ sudoku(X, Y, N) :- initial(X, Y, N).
 
 #const n=2.
 % Define subgrid mapping
-subgrid(X, Y, G) :- 
-    X = 1..n*n, Y = 1..n*n, G = 1 + (((X-1)/n)*n + (Y-1)/n).
+subgrid(X, Y, G) :- X = 1..n*n, Y = 1..n*n, G = 1 + (((X-1)/n)*n + (Y-1)/n).
 
 #show subgrid/3.
 #show sudoku/3.
