@@ -6,4 +6,12 @@
 
 % Your implementation please...
 
+row(1..n). 
+col(1..n). 
+num(1..n).
+
+cell(X, Y) :- row(X), col(Y).
+
+1 { sudoku(X, Y, N) : num(N) } 1 :- cell(X, Y).
+
 #show sudoku/3.
