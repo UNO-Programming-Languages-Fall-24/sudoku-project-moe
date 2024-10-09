@@ -6,6 +6,7 @@
 
 % Your implementation please...
 #const n = 4.
+#const g = 2.
 
 row(1..n). 
 col(1..n). 
